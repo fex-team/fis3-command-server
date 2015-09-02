@@ -1,0 +1,23 @@
+{
+  "name": "fis3-command-server",
+  "version": "0.0.1",
+  "description": "fis3 server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fex-team/fis3-command-server.git"
+  },
+  "keywords": [
+    "fis3",
+    "server"
+  ],
+  "author": "fis",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/fex-team/fis3-command-server/issues"
+  },
+  "homepage": "https://github.com/fex-team/fis3-command-server"
+}
