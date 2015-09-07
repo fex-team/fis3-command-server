@@ -8,10 +8,11 @@ exports.options = {
   '-h, --help': 'print this help message',
   '-p, --port <int>': 'server listen port',
   '--root <path>': 'document root',
+  '--webapp <path>': 'alias for --root',
   '--type': 'specify server type',
   '--timeout <seconds>': 'start timeout',
   '--https': 'start https server',
-  '--no-browse': 'do not open a browse.',
+  '--no-browse': 'do not open a web browser.',
   '--no-daemon': 'do not run in background.'
 };
 exports.commands = {
@@ -34,11 +35,17 @@ exports.run = function(argv, cli, env) {
     return;
   }
 
+  // 因为 root 被占用了，所以这里暂且允许通过 --webapp 来指定。
+  if (argv.webapp) {
+    argv.root = argv.webapp;
+    delete argv.webapp;
+  }
+
   var cmd = argv._[1];
   var serverInfo = util.serverInfo() || {};
   delete argv['_'];
   var options = _.assign({
-    type: serverInfo.type || 'node',
+    type: serverInfo.type || fis.get('server.type', 'node'),
 
     // 每次 start 的时候，root 都需要重新指定，否则使用默认 document root.
     root: cmd === 'start' ? util.getDefaultServerRoot() : (serverInfo.root || util.getDefaultServerRoot()),
