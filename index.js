@@ -13,7 +13,9 @@ exports.options = {
   '--timeout <seconds>': 'start timeout',
   '--https': 'start https server',
   '--no-browse': 'do not open a web browser.',
-  '--no-daemon': 'do not run in background.'
+  '--no-daemon': 'do not run in background.',
+  '--include <glob>': 'clean include filter',
+  '--exclude <glob>': 'clean exclude filter'
 };
 exports.commands = {
   'start': 'start server',
