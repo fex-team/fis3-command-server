@@ -43,6 +43,12 @@ exports.run = function(argv, cli, env) {
     delete argv.www;
   }
 
+  // short name
+  if (argv.p && !argv.port) {
+    argv.port = argv.p;
+    delete argv.p;
+  }
+
   var cmd = argv._[1];
   var serverInfo = util.serverInfo() || {};
   delete argv['_'];
