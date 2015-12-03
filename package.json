@@ -1,6 +1,6 @@
 {
   "name": "fis3-command-server",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "fis3 server",
   "main": "index.js",
   "scripts": {

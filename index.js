@@ -59,7 +59,7 @@ exports.run = function(argv, cli, env) {
     root: cmd === 'start' ? util.getDefaultServerRoot() : (serverInfo.root || util.getDefaultServerRoot()),
 
     port: 8080,
-    timeout: 5, // 5 秒
+    timeout: 30, // 30 秒
     browse: true,
     daemon: true,
     https: false
