@@ -1,6 +1,6 @@
 {
   "name": "fis3-command-server",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "fis3 server",
   "main": "index.js",
   "scripts": {
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/fex-team/fis3-command-server/issues"
   },
-  "homepage": "https://github.com/fex-team/fis3-command-server"
+  "homepage": "https://github.com/fex-team/fis3-command-server",
+  "dependencies": {
+    "qrcode-terminal": "^0.10.0"
+  }
 }

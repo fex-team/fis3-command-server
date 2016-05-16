@@ -15,7 +15,8 @@ exports.options = {
   '--no-browse': 'do not open a web browser.',
   '--no-daemon': 'do not run in background.',
   '--include <glob>': 'clean include filter',
-  '--exclude <glob>': 'clean exclude filter'
+  '--exclude <glob>': 'clean exclude filter',
+  '--qrcode': 'output the address with qrcode'
 };
 exports.commands = {
   'start': 'start server',
